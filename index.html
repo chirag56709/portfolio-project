@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chirag | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-5 bg-gray-800 shadow-md">
+    <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl">
+      <img src="images/logo.jpg" alt="Chirag Logo" class="w-8 h-8 rounded-full object-cover" />
+      <span>Chirag</span>
+    </a>
+    <ul class="flex gap-6 text-gray-300">
+      <li><a href="index.html" class="text-white font-semibold">Home</a></li>
+      <li><a href="about.html" class="hover:text-white">About</a></li>
+      <li><a href="projects.html" class="hover:text-white">Projects</a></li>
+      <li><a href="resume.html" class="hover:text-white">Resume</a></li>
+      <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="max-w-6xl mx-auto px-4 py-16 text-center">
+    <!-- Profile Image -->
+    <div class="mx-auto mb-6 w-40 h-40 sm:w-44 sm:h-44 relative">
+      <img src="images/proflie.jpg" alt="Chirag"
+        class="w-full h-full object-cover rounded-full border-4 border-green-400 shadow-lg hover:scale-105 transition-transform duration-300" />
+      <span class="absolute inset-0 rounded-full ring-2 ring-white/10 animate-pulse"></span>
+    </div>
+
+    <!-- Name -->
+    <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">
+      Hi, I'm <span class="text-green-400">Chirag</span>
+    </h1>
+
+    <!-- Tagline -->
+    <p class="text-base sm:text-lg text-gray-300 mb-4 font-medium max-w-2xl mx-auto leading-relaxed">
+      Web developer creating responsive UIs with HTML, CSS, JS, React & PHP — backed by a growing foundation in C++
+      for logic and problem-solving.
+    </p>
+    <p class="text-sm text-gray-400 mb-6 italic">
+      Exploring full-stack development & solving real-world challenges.
+    </p>
+
+    <!-- CTA -->
+    <a href="projects.html"
+      class="bg-green-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition">
+      Explore My Projects
+    </a>
+
+    <!-- Social Links -->
+    <div class="flex justify-center mt-10 gap-6">
+      <!-- GitHub -->
+      <a href="https://github.com/chirag56709" target="_blank"
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-600 text-white hover:bg-green-500 transition group shadow-md">
+        <i data-feather="github" class="w-5 h-5"></i>
+        <span class="font-medium">GitHub</span>
+      </a>
+      <!-- LinkedIn -->
+      <a href="http://www.linkedin.com/in/chirag-joshi77" target="_blank"
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-700 text-white hover:bg-blue-600 transition group shadow-md">
+        <i data-feather="linkedin" class="w-5 h-5"></i>
+        <span class="font-medium">LinkedIn</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center py-4 text-gray-400">
+    &copy; 2025 Chirag | Web Developer
+  </footer>
+
+  <script>feather.replace()</script>
+</body>
+</html>

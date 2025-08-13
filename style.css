@@ -1,0 +1,28 @@
+/* code for button use in project.html*/
+
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: #121212;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(45deg, #ff6ec4, #7873f5);
+  box-shadow: 0 4px 12px rgba(255, 110, 196, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.github-btn:hover {
+  background: #1a1a1a;
+  box-shadow: 0 6px 16px rgba(255, 110, 196, 0.8);
+}
+.github-btn svg {
+  margin-right: 8px;
+}
