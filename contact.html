@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - Chirag</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <style>
-    /* Smooth fade-in for form */
+
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -18,9 +18,10 @@
     }
   </style>
 </head>
+
 <body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
 
-  <!-- Navbar -->
+  <!-- ✅ Navbar -->
   <nav class="flex justify-between items-center p-5 bg-gray-800 shadow-md sticky top-0 z-10">
     <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl">
       <img src="images/log2.webp" alt="Chirag Logo" class="w-8 h-8 rounded-full object-cover" />
@@ -35,9 +36,9 @@
     </ul>
   </nav>
 
-  <!-- Contact Section -->
-  <main class="flex-grow flex items-center justify-center px-4 py-12 max-w-3xl mx-auto w-full">
-    <section class="bg-gray-800 rounded-lg shadow-lg p-8 w-full fade-in">
+  <!-- ✅ Contact Section -->
+  <main class="flex-grow flex items-center justify-center px-4 py-16 max-w-3xl mx-auto w-full">
+    <section class="bg-gray-800 rounded-2xl shadow-lg p-8 w-full fade-in border border-gray-700">
       <h1 class="text-4xl font-bold text-green-400 mb-6 text-center">Get in Touch</h1>
       <form action="contact_process.php" method="POST" class="space-y-6">
         <div>
@@ -83,9 +84,9 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 text-center py-6 border-t border-gray-700">
-    <p class="text-sm">© 2025 Chirag | All rights reserved.</p>
+
+  <footer class="bg-gray-800 text-center py-4 text-gray-400 border-t border-gray-700">
+    &copy; 2025 Chirag | Web Developer
   </footer>
 
   <script>

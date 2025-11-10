@@ -7,20 +7,40 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body class="bg-gray-900 text-white font-sans">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center p-5 bg-gray-800 shadow-md">
-    <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl">
-      <img src="images/logo.jpg" alt="Chirag Logo" class="w-8 h-8 rounded-full object-cover" />
-      <span>Chirag</span>
-    </a>
-    <ul class="flex gap-6 text-gray-300">
-      <li><a href="index.html" class="text-white font-semibold">Home</a></li>
-      <li><a href="about.html" class="hover:text-white">About</a></li>
-      <li><a href="projects.html" class="hover:text-white">Projects</a></li>
-      <li><a href="resume.html" class="hover:text-white">Resume</a></li>
-      <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+  <nav class="bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl">
+        <img src="images/logo.jpg" alt="Chirag Logo" class="w-8 h-8 rounded-full object-cover" />
+        <span>Chirag</span>
+      </a>
+
+      <!-- Hamburger Icon (for mobile view) -->
+      <button id="menu-btn" class="text-white text-3xl md:hidden focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Desktop Navigation -->
+      <ul id="menu" class="hidden md:flex gap-6 text-gray-300">
+        <li><a href="index.html" class="text-white font-semibold">Home</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="projects.html" class="hover:text-white">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-white">Resume</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <ul id="mobile-menu" class="md:hidden hidden flex-col bg-gray-700 text-gray-300 px-6 py-4 space-y-3">
+      <li><a href="index.html" class="block py-2 hover:text-white">Home</a></li>
+      <li><a href="about.html" class="block py-2 hover:text-white">About</a></li>
+      <li><a href="projects.html" class="block py-2 hover:text-white">Projects</a></li>
+      <li><a href="resume.html" class="block py-2 hover:text-white">Resume</a></li>
+      <li><a href="contact.html" class="block py-2 hover:text-white">Contact</a></li>
     </ul>
   </nav>
 
@@ -47,7 +67,7 @@
       Exploring full-stack development & solving real-world challenges.
     </p>
 
-    <!-- CTA -->
+    <!-- Call To Action -->
     <a href="projects.html"
       class="bg-green-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-green-500 transition">
       Explore My Projects
@@ -57,13 +77,14 @@
     <div class="flex justify-center mt-10 gap-6">
       <!-- GitHub -->
       <a href="https://github.com/chirag56709" target="_blank"
-        class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-600 text-white hover:bg-green-500 transition group shadow-md">
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-green-600 text-white hover:bg-green-500 transition shadow-md">
         <i data-feather="github" class="w-5 h-5"></i>
         <span class="font-medium">GitHub</span>
       </a>
+
       <!-- LinkedIn -->
       <a href="http://www.linkedin.com/in/chirag-joshi77" target="_blank"
-        class="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-700 text-white hover:bg-blue-600 transition group shadow-md">
+        class="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-700 text-white hover:bg-blue-600 transition shadow-md">
         <i data-feather="linkedin" class="w-5 h-5"></i>
         <span class="font-medium">LinkedIn</span>
       </a>
@@ -75,6 +96,17 @@
     &copy; 2025 Chirag | Web Developer
   </footer>
 
-  <script>feather.replace()</script>
+  <!-- JavaScript -->
+  <script>
+    feather.replace();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
 </body>
 </html>

@@ -3,102 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - Chirag</title>
+  <title>Projects - Chirag</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-900 text-white font-sans">
-    
-  <!-- Navbar -->
-  <!-- Navbar ka part jisme logo aur naam side by side hain -->
-<nav class="flex justify-between items-center p-5 bg-gray-800 shadow-md">
-  <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl">
-    <img src="images/log2.webp" alt="Chirag Logo" class="w-8 h-8 rounded-full object-cover" />
-    <span>Chirag</span>
-  </a>
-  <ul class="flex gap-6 text-gray-300">
-    <li><a href="index.html" class="hover:text-white">Home</a></li>
-    <li><a href="about.html" class="text-white font-semibold">About</a></li>
-    <li><a href="projects.html" class="hover:text-white">Projects</a></li>
-    <li><a href="resume.html" class="hover:text-white">Resume</a></li>
-    <li><a href="contact.html" class="hover:text-white">Contact</a></li>
-  </ul>
-</nav>
 
+<body class="bg-gray-900 text-white font-sans flex flex-col min-h-screen">
 
-  <!-- Page Header -->
+  <!-- ✅ Navbar -->
+  <nav class="flex justify-between items-center p-5 bg-gray-800 shadow-md sticky top-0 z-10">
+    <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl">
+      <img src="images/log2.webp" alt="Chirag Logo" class="w-8 h-8 rounded-full object-cover" />
+      <span>Chirag</span>
+    </a>
+    <ul class="flex gap-6 text-gray-300 text-sm md:text-base flex-wrap justify-center md:justify-end">
+      <li><a href="index.html" class="hover:text-white">Home</a></li>
+      <li><a href="about.html" class="hover:text-white">About</a></li>
+      <li><a href="projects.html" class="text-white font-semibold">Projects</a></li>
+      <li><a href="resume.html" class="hover:text-white">Resume</a></li>
+      <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Header -->
   <header class="max-w-6xl mx-auto px-6 py-12 text-center">
     <h1 class="text-5xl font-extrabold text-green-400 mb-4 drop-shadow-lg">My Projects</h1>
     <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed tracking-wide">
-      Here are some of the projects I have crafted to showcase my skills in web development and programming. Dive in and explore!
+      Here are some of the projects I’ve created to showcase my skills in web development and programming.  
+      Take a look below!
     </p>
   </header>
 
-  <!-- Projects Grid -->
+  <!-- ✅ Projects Grid -->
+  <section class="max-w-6xl mx-auto px-6 pb-20 grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-center">
 
-<!-- Projects Grid -->
-<section class="max-w-6xl mx-auto px-6 pb-20 grid gap-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-center">
-
-  <!-- Project Card -->
-  <article class="bg-gradient-to-tr from-gray-800 to-gray-700 rounded-xl shadow-2xl p-8 hover:scale-[1.03] transition-transform duration-300 flex flex-col justify-between">
-    <div>
-      <h2 class="text-3xl font-semibold text-green-400 mb-4 drop-shadow-md">Blood Bank</h2>
-      <p class="text-gray-300 mb-4 leading-relaxed">
-        A web app to manage blood donations and requests efficiently. Built with PHP and MySQL backend and a clean, responsive frontend.
-      </p>
-      <div class="flex gap-3 mb-6">
-        <span class="inline-block bg-green-600 bg-opacity-90 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide shadow-md">PHP</span>
-        <span class="inline-block bg-blue-600 bg-opacity-90 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide shadow-md">MySQL</span>
-        <span class="inline-block bg-yellow-500 bg-opacity-90 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide shadow-md">HTML/CSS</span>
+    <!-- Project 1 -->
+    <article class="bg-gradient-to-tr from-gray-800 to-gray-700 rounded-xl shadow-2xl p-8 hover:scale-[1.03] transition-transform duration-300 flex flex-col justify-between">
+      <div>
+        <h2 class="text-3xl font-semibold text-green-400 mb-4 drop-shadow-md">Blood Bank</h2>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          A web app to manage blood donations and requests efficiently. Built with PHP and MySQL backend, along with a responsive modern frontend.
+        </p>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">PHP</span>
+          <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">MySQL</span>
+          <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">HTML/CSS</span>
+        </div>
       </div>
-    </div>
-    <a href="https://github.com/chirag56709/Portfolio" target="_blank" class="github-btn text-green-400 font-semibold hover:underline">
-      View On GitHub
-    </a>
-  </article>
+      <a href="https://github.com/chirag56709/Portfolio" target="_blank" class="text-green-400 font-semibold hover:underline">
+        View on GitHub
+      </a>
+    </article>
 
-  <!-- Project Card -->
-  <article class="bg-gradient-to-tr from-gray-800 to-gray-700 rounded-xl shadow-2xl p-8 hover:scale-[1.03] transition-transform duration-300 flex flex-col justify-between">
-    <div>
-      <h2 class="text-3xl font-semibold text-green-400 mb-4 drop-shadow-md">Tic Tac Toe</h2>
-      <p class="text-gray-300 mb-4 leading-relaxed">
-        Classic Tic Tac Toe game developed in C++ with efficient logic and console-based interactive gameplay.
-      </p>
-      <div class="flex gap-3 mb-6">
-        <span class="inline-block bg-red-600 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide shadow-md">C++</span>
+    <!-- Project 2 -->
+    <article class="bg-gradient-to-tr from-gray-800 to-gray-700 rounded-xl shadow-2xl p-8 hover:scale-[1.03] transition-transform duration-300 flex flex-col justify-between">
+      <div>
+        <h2 class="text-3xl font-semibold text-green-400 mb-4 drop-shadow-md">Tic Tac Toe</h2>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          A console-based Tic Tac Toe game developed in C++ with efficient logic and clear structure.
+        </p>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-medium">C++</span>
+        </div>
       </div>
-    </div>
-    <a href="https://github.com/chirag56709/Tic-Tac-Toe" target="_blank" class="github-btn text-green-400 font-semibold hover:underline">
-      View On GitHub
-    </a>
-  </article>
+      <a href="https://github.com/chirag56709/Tic-Tac-Toe" target="_blank" class="text-green-400 font-semibold hover:underline">
+        View on GitHub
+      </a>
+    </article>
 
-  <!-- Project Card -->
-  <article class="bg-gradient-to-tr from-gray-800 to-gray-700 rounded-xl shadow-2xl p-8 hover:scale-[1.03] transition-transform duration-300 flex flex-col justify-between">
-    <div>
-      <h2 class="text-3xl font-semibold text-green-400 mb-4 drop-shadow-md">Portfolio Website</h2>
-      <p class="text-gray-300 mb-4 leading-relaxed">
-        A fully responsive personal portfolio website showcasing my projects and skills. Built using HTML, Tailwind CSS, and JavaScript with modern UI, dark mode, and smooth animations.
-      </p>
-      <div class="flex gap-3 mb-6 flex-wrap">
-        <span class="inline-block bg-green-600 bg-opacity-90 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide shadow-md">HTML</span>
-        <span class="inline-block bg-blue-600 bg-opacity-90 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide shadow-md">TailwindCSS</span>
-        <span class="inline-block bg-yellow-500 bg-opacity-90 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide shadow-md">JavaScript</span>
-        <span class="inline-block bg-yellow-500 bg-opacity-90 text-white px-4 py-1 rounded-full text-sm font-medium tracking-wide shadow-md">PHP</span>
+    <!-- Project 3 -->
+    <article class="bg-gradient-to-tr from-gray-800 to-gray-700 rounded-xl shadow-2xl p-8 hover:scale-[1.03] transition-transform duration-300 flex flex-col justify-between">
+      <div>
+        <h2 class="text-3xl font-semibold text-green-400 mb-4 drop-shadow-md">Portfolio Website</h2>
+        <p class="text-gray-300 mb-4 leading-relaxed">
+          A fully responsive personal portfolio showcasing my projects and skills. Built with HTML, Tailwind CSS, JavaScript, and PHP — featuring animations and dark theme.
+        </p>
+        <div class="flex flex-wrap gap-3 mb-6">
+          <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">HTML</span>
+          <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">TailwindCSS</span>
+          <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+          <span class="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium">PHP</span>
+        </div>
       </div>
-    </div>
-    <a href="https://your-portfolio-link.com" target="_blank" class="github-btn text-green-400 font-semibold hover:underline">
-      Visit Live Portfolio
-    </a>
-  </article>
+      <a href="https://your-portfolio-link.com" target="_blank" class="text-green-400 font-semibold hover:underline">
+        Visit Live Portfolio
+      </a>
+    </article>
+  </section>
 
-</section>
-
-
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 bg-opacity-90 text-center py-6 text-gray-400 border-t border-gray-700 mt-auto">
+  <!-- ✅ Footer -->
+  <footer class="bg-gray-800 text-center py-4 text-gray-400 border-t border-gray-700 mt-auto">
     &copy; 2025 Chirag | Web Developer
   </footer>
 

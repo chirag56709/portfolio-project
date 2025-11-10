@@ -3,46 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - Chirag</title>
+  <title>Resume - Chirag</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center p-5 bg-gray-800 shadow-md">
-    <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl">
+  <nav class="flex flex-col sm:flex-row justify-between items-center p-5 bg-gray-800 shadow-md">
+    <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl mb-4 sm:mb-0">
       <img src="images/log2.webp" alt="Chirag Logo" class="w-8 h-8 rounded-full object-cover" />
       <span>Chirag</span>
     </a>
-    <ul class="flex gap-6 text-gray-300 text-sm sm:text-base">
+    <ul class="flex flex-col sm:flex-row gap-4 sm:gap-6 text-gray-300 text-sm sm:text-base">
       <li><a href="index.html" class="hover:text-white">Home</a></li>
-      <li><a href="about.html" class="text-white font-semibold">About</a></li>
+      <li><a href="about.html" class="hover:text-white">About</a></li>
       <li><a href="projects.html" class="hover:text-white">Projects</a></li>
-      <li><a href="resume.html" class="hover:text-white">Resume</a></li>
+      <li><a href="resume.html" class="text-white font-semibold">Resume</a></li>
       <li><a href="contact.html" class="hover:text-white">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Resume Section -->
-  <section class="py-12 px-4 max-w-5xl mx-auto space-y-12">
+  <section class="py-12 px-4 sm:px-6 max-w-5xl mx-auto space-y-12 flex-grow">
+
+    <!-- Header: Title + Download -->
     <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
-      <h1 class="text-3xl font-bold text-blue-400">📄 My Resume</h1>
-      <a href="Cv2025.pdf" download class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm sm:text-base">Download Resume</a>
+      <h1 class="text-3xl sm:text-4xl font-bold text-blue-400">📄 My Resume</h1>
+      <a href="Cv2025.pdf" download class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 text-sm sm:text-base">
+        Download Resume
+      </a>
     </div>
 
     <!-- Education -->
     <div class="fade-in">
       <h2 class="text-2xl font-semibold text-blue-300 mb-4">🎓 Education</h2>
       <ul class="space-y-3 bg-[#1e1e1e] p-4 rounded-lg">
-        <li><strong>MCA</strong> Lovely Professional University</li>
-        <li><strong>BSc</strong> SSJ Campus (2020 - 2023)</li>
-        <li><strong>12th (Intermediate)</strong> Koormanchal Academy (2018-2019)</li>
+        <li><strong>MCA</strong> - Lovely Professional University</li>
+        <li><strong>BSc</strong> - SSJ Campus (2020 - 2023)</li>
+        <li><strong>12th (Intermediate)</strong> - Koormanchal Academy (2018-2019)</li>
       </ul>
     </div>
 
     <!-- Skills -->
     <div class="fade-in">
       <h2 class="text-2xl font-semibold text-blue-400 mb-4">🛠 Skills</h2>
+
       <p class="text-xl text-blue-300 font-semibold mb-2">Languages</p>
       <p class="mb-4">C++, JavaScript, PHP, SQL</p>
 
@@ -59,49 +64,48 @@
       </div>
     </div>
 
-
-
-  <!-- Certifications -->
-  <div class="fade-in">
-    <h2 class="text-2xl font-semibold text-blue-300 mb-4">📜 Certifications</h2>
-    <ul class="list-disc list-inside space-y-2">
-      <li>PHP Certificate</li>
-      <li>Meta Front-End (Coursera)</li>
-      <li>Web Design & Development (Capscom)</li>
-    </ul>
+    <!-- Certifications -->
+    <div class="fade-in">
+      <h2 class="text-2xl font-semibold text-blue-300 mb-4">📜 Certifications</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li>PHP Certificate</li>
+        <li>Meta Front-End (Coursera)</li>
+        <li>Web Design & Development (Capscom)</li>
+      </ul>
     </div>
 
+    <!-- Projects -->
+    <div class="fade-in">
+      <h2 class="text-2xl font-semibold text-blue-300 mb-4">💻 Projects</h2>
+      <ul class="list-disc list-inside space-y-2">
+        <li><strong>Blood Bank</strong></li>
+        <li><strong>Tic Tac Toe</strong></li>
+        <li><strong>Portfolio Website</strong></li>
+      </ul>
+    </div>
 
+  </section>
 
-  <!-- Projects -->
-  <div class="fade-in">
-    <h2 class="text-2xl font-semibold text-blue-300 mb-4">💻 Projects</h2>
-    <ul class="list-disc list-inside space-y-2">
-      <li><strong>Blood Bank</strong></li>
-      <li><strong>Tic Tac Toe</strong></li>
-      <li><strong>Portfolio Website</strong></li>
-    </ul>
-  </div>
-</section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center py-4 border-t border-gray-700 mt-auto">
+    <p class="text-sm">© 2025 Chirag | All rights reserved.</p>
+  </footer>
 
-<!-- Footer -->
-<footer class="bg-black text-white text-center py-4 border-t border-gray-700">
-  <p class="text-sm">© 2025 Chirag | All rights reserved.</p>
-</footer>
+  <!-- JS for fade-in on scroll -->
+  <script>
+    const sections = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
 
-<!-- JS for fade-in on scroll -->
-<script>
-  const sections = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
+    sections.forEach(section => {
+      observer.observe(section);
     });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-</script>
+  </script>
+</body>
+</html>
