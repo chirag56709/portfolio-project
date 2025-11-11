@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact - Chirag</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
   <style>
-
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -15,6 +15,9 @@
     .fade-in.show {
       opacity: 1;
       transform: translateY(0);
+    }
+    input:hover, textarea:hover {
+      border-color: #10B981;
     }
   </style>
 </head>
@@ -40,9 +43,15 @@
   <main class="flex-grow flex items-center justify-center px-4 py-16 max-w-3xl mx-auto w-full">
     <section class="bg-gray-800 rounded-2xl shadow-lg p-8 w-full fade-in border border-gray-700">
       <h1 class="text-4xl font-bold text-green-400 mb-6 text-center">Get in Touch</h1>
-      <form action="contact_process.php" method="POST" class="space-y-6">
+      
+      <!-- ✅ Success Message -->
+      <p id="formMessage" class="hidden text-center text-green-400 mb-4 font-semibold"></p>
+
+      <form id="contactForm" action="contact_process.php" method="POST" class="space-y-6">
         <div>
-          <label for="name" class="block mb-2 font-semibold text-gray-200">Name</label>
+          <label for="name" class="block mb-2 font-semibold text-gray-200 flex items-center gap-2">
+            <i data-feather="user"></i> Name
+          </label>
           <input
             type="text"
             id="name"
@@ -52,8 +61,11 @@
             class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-green-400"
           />
         </div>
+
         <div>
-          <label for="email" class="block mb-2 font-semibold text-gray-200">Email</label>
+          <label for="email" class="block mb-2 font-semibold text-gray-200 flex items-center gap-2">
+            <i data-feather="mail"></i> Email
+          </label>
           <input
             type="email"
             id="email"
@@ -63,8 +75,11 @@
             class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 placeholder-gray-400 text-white focus:outline-none focus:ring-2 focus:ring-green-400"
           />
         </div>
+
         <div>
-          <label for="message" class="block mb-2 font-semibold text-gray-200">Message</label>
+          <label for="message" class="block mb-2 font-semibold text-gray-200 flex items-center gap-2">
+            <i data-feather="message-circle"></i> Message
+          </label>
           <textarea
             id="message"
             name="message"
@@ -74,22 +89,25 @@
             class="w-full px-4 py-3 rounded-md bg-gray-700 border border-gray-600 placeholder-gray-400 text-white resize-none focus:outline-none focus:ring-2 focus:ring-green-400"
           ></textarea>
         </div>
+
         <button
           type="submit"
-          class="w-full bg-green-500 hover:bg-green-600 transition-colors font-bold py-3 rounded-md text-white text-lg shadow-md"
+          class="w-full bg-green-500 hover:bg-green-600 transition-colors font-bold py-3 rounded-md text-white text-lg shadow-md flex items-center justify-center gap-2"
         >
-          Send Message
+          <i data-feather="send"></i> Send Message
         </button>
       </form>
     </section>
   </main>
 
-
+  <!-- ✅ Footer -->
   <footer class="bg-gray-800 text-center py-4 text-gray-400 border-t border-gray-700">
     &copy; 2025 Chirag | Web Developer
   </footer>
 
   <script>
+    feather.replace();
+
     // Fade-in animation on scroll
     const fadeElements = document.querySelectorAll('.fade-in');
     const observer = new IntersectionObserver(entries => {
@@ -100,8 +118,16 @@
         }
       });
     }, { threshold: 0.2 });
-
     fadeElements.forEach(el => observer.observe(el));
+
+    // ✅ Show success message
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("formMessage").textContent = "✅ Message sent successfully!";
+      document.getElementById("formMessage").classList.remove("hidden");
+      form.reset();
+    });
   </script>
 </body>
 </html>

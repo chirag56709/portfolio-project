@@ -5,23 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects - Chirag</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body class="bg-gray-900 text-white font-sans flex flex-col min-h-screen">
 
-  <!-- ✅ Navbar -->
-  <nav class="flex justify-between items-center p-5 bg-gray-800 shadow-md sticky top-0 z-10">
-    <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl">
-      <img src="images/log2.webp" alt="Chirag Logo" class="w-8 h-8 rounded-full object-cover" />
-      <span>Chirag</span>
-    </a>
-    <ul class="flex gap-6 text-gray-300 text-sm md:text-base flex-wrap justify-center md:justify-end">
-      <li><a href="index.html" class="hover:text-white">Home</a></li>
-      <li><a href="about.html" class="hover:text-white">About</a></li>
-      <li><a href="projects.html" class="text-white font-semibold">Projects</a></li>
-      <li><a href="resume.html" class="hover:text-white">Resume</a></li>
-      <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+  
+  <nav class="bg-gray-800 shadow-md">
+    <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 text-green-400 font-bold text-2xl">
+        <img src="images/log2.webp" alt="Chirag Logo" class="w-8 h-8 rounded-full object-cover" />
+        <span>Chirag</span>
+      </a>
+
+      <!-- Hamburger Icon -->
+      <button id="menu-btn" class="text-white text-3xl md:hidden focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Desktop Navigation -->
+      <ul id="menu" class="hidden md:flex gap-6 text-gray-300">
+        <li><a href="index.html" class="hover:text-white">Home</a></li>
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="projects.html" class="text-white font-semibold">Projects</a></li>
+        <li><a href="resume.html" class="hover:text-white">Resume</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <ul id="mobile-menu" class="md:hidden hidden flex-col bg-gray-700 text-gray-300 px-6 py-4 space-y-3">
+      <li><a href="index.html" class="block py-2 hover:text-white">Home</a></li>
+      <li><a href="about.html" class="block py-2 hover:text-white">About</a></li>
+      <li><a href="projects.html" class="block py-2 text-white font-semibold">Projects</a></li>
+      <li><a href="resume.html" class="block py-2 hover:text-white">Resume</a></li>
+      <li><a href="contact.html" class="block py-2 hover:text-white">Contact</a></li>
     </ul>
   </nav>
 
@@ -29,8 +48,7 @@
   <header class="max-w-6xl mx-auto px-6 py-12 text-center">
     <h1 class="text-5xl font-extrabold text-green-400 mb-4 drop-shadow-lg">My Projects</h1>
     <p class="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed tracking-wide">
-      Here are some of the projects I’ve created to showcase my skills in web development and programming.  
-      Take a look below!
+      Here are some of the projects I’ve created to showcase my skills in web development and programming. Take a look below!
     </p>
   </header>
 
@@ -96,5 +114,16 @@
     &copy; 2025 Chirag | Web Developer
   </footer>
 
+  <!-- ✅ JavaScript -->
+  <script>
+    feather.replace();
+
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
